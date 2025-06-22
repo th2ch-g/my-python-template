@@ -8,11 +8,7 @@ LOGGER = generate_logger(__name__)
 
 def cli() -> None:
     # make parser
-    parser = argparse.ArgumentParser(
-        description=(
-            "Input description here"
-        )
-    )
+    parser = argparse.ArgumentParser(description=("Input description here"))
 
     # subcommands
     # subparsers = parser.add_subparsers()
@@ -20,7 +16,7 @@ def cli() -> None:
     # add options
     # parser.add_argument("--option", type=str, default="default", help="Option description")
 
-    args = parser.parse_args()
+    _args = parser.parse_args()
 
     # prohibit no args
     # if len(sys.argv) == 1:
