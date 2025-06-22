@@ -1,0 +1,31 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: trailing-whitespace
+        pass_filenames: false
+        always_run: true
+      - id: end-of-file-fixer
+        pass_filenames: false
+        always_run: true
+      - id: check-yaml
+        pass_filenames: false
+        always_run: true
+      - id: check-json
+        pass_filenames: false
+        always_run: true
+      - id: check-toml
+        pass_filenames: false
+        always_run: true
+      - id: check-merge-conflict
+        pass_filenames: false
+        always_run: true
+      - id: check-added-large-files
+        pass_filenames: false
+        always_run: true
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.11.13
+    hooks:
+      - id: ruff-format
+      - id: ruff
+        args: [--fix, --exit-non-zero-on-fix]
